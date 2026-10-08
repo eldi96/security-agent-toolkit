@@ -1,10 +1,13 @@
-# flowchart TD
 
+# Python 자동화 파이프라인 — 함수 실행 흐름
+
+```mermaid
+flowchart TD
     A["python pipeline.py"] --> B["run_pipeline(config_path, today)"]
     B --> C["notifier.load_config()"]
     C --> D{"필수 설정이 모두 있는가?"}
-    D -- 아니오 --> X["오류 출력 후 종료"]
-    D -- 예 --> E["llm_client.MODEL 설정"]
+    D -- "아니오" --> X["오류 출력 후 종료"]
+    D -- "예" --> E["llm_client.MODEL 설정"]
     E --> F["events_1008.json 읽기"]
     F --> G["run_report(events, today)"]
     G --> H["event_summarizer.summarize_events()"]
@@ -25,3 +28,4 @@
     V --> W["notifier.notify()"]
     W --> Y["웹훅 POST 전송"]
     Y --> Z["결과 메시지 출력"]
+```
