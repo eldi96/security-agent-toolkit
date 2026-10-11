@@ -1,4 +1,4 @@
-# security-agent-toolkit
+
 # Security Agent Toolkit
 
 SKT ALEPH 교육 과정에서 진행한 Python 및 보안 자동화 실습을 기록한 저장소입니다.
