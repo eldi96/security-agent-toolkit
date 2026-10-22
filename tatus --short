@@ -1,0 +1,29 @@
+ .../__pycache__/config_loader.cpython-313.pyc      |  Bin [31m0[m -> [32m979[m bytes
+ .../__pycache__/exception_policy.cpython-313.pyc   |  Bin [31m0[m -> [32m1032[m bytes
+ access_control/__pycache__/policy.cpython-313.pyc  |  Bin [31m0[m -> [32m850[m bytes
+ access_control/__pycache__/rbac.cpython-313.pyc    |  Bin [31m1195[m -> [32m1195[m bytes
+ .../__pycache__/role_admin.cpython-313.pyc         |  Bin [31m0[m -> [32m907[m bytes
+ access_control/config/exceptions.json              |    7 [32m+[m
+ access_control/config/users_broken.json            |    3 [32m+[m
+ access_control/config_loader.py                    |   35 [32m+[m
+ access_control/day01_pm_rbac.md                    |  260 [32m+[m[31m-[m
+ access_control/day01_pm_report.md                  |   52 [32m+[m[31m-[m
+ access_control/day02_2-1_run.py                    |   29 [32m+[m
+ access_control/day02_3-1_run.py                    |   32 [32m+[m
+ access_control/day02_4-1_run.py                    |   38 [32m+[m
+ access_control/day02_5-1_broken.py                 |   15 [32m+[m
+ access_control/day02_am_policy.md                  |  954 [32m+++[m
+ access_control/day02_am_report.md                  |  233 [32m+[m
+ access_control/day02_pm_report.md                  |  108 [32m+[m
+ access_control/day02_pm_tests.md                   |  709 [32m+++[m
+ access_control/exception_policy.py                 |   25 [32m+[m
+ access_control/policy.py                           |   22 [32m+[m
+ access_control/role_admin.py                       |   26 [32m+[m
+ access_control/test_policy.py                      |   28 [32m+[m
+ access_control/test_policy_extra.py                |   16 [32m+[m
+ agent_core/0930_python5-1.ipynb                    | 6072 [32m+++++++++[m[31m----------[m
+ agent_core/1002_python6-1.ipynb                    | 6196 [32m++++++++++[m[31m----------[m
+ agent_core/processed_ids.json                      |    4 [32m+[m[31m-[m
+ agent_core/scheduler_job.py                        |  110 [32m+[m[31m-[m
+ docs/2026-10-22_seat.md                            |    1 [31m-[m
+ 28 files changed, 8646 insertions(+), 6329 deletions(-)
