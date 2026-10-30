@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>접근통제 시스템</title>
+</head>
+<body>
+    <h2>접근통제 판정 시스템</h2>
+
+    <form id="form">
+        <select name="user">
+            <option value="seoyeon">seoyeon</option>
+            <option value="junho">junho</option>
+            <option value="gaeun">gaeun</option>
+            <option value="dami">dami</option>
+            <option value="batch-night">batch-night</option>
+            <option value="tester">tester</option>
+        </select>
+        <label for="resource"></label>
+        <select name="resource" id="resource">
+            <option value="SALES">SALES (판매)</option>
+            <option value="SETTLE">SETTLE (정산)</option>
+            <option value="ACCOUNT">ACCOUNT (계정)</option>
+        </select>
+        <label for="action"></label>
+        <select name="action" id="action">
+            <option value="QUERY">QUERY (조회)</option>
+            <option value="CHANGE" selected>CHANGE (변경)</option>
+        </select>
+        <select name="network">
+            <option value="office">office</option>
+            <option value="vpn">vpn</option>
+            <option value="external">external</option>
+        </select>
+        <input type="datetime-local" name="time" value="2026-10-30T09:00">
+        <button type="submit">판정하기</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <script>
+        document.getElementById("form").onsubmit = async (event) => {
+            event.preventDefault();
+
+            const params = new URLSearchParams(
+                new FormData(event.target)
+            );
+
+            const response = await fetch("/check?" + params);
+            const data = await response.json();
+
+            document.getElementById("result").textContent =
+                `${response.status} - ${data.allowed ? "허용" : "거부"} (${data.reason})`;
+        };
+    </script>
+</body>
+</html>
