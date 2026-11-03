@@ -1,3 +1,11 @@
+
+
+# users.json과 roles.json에서 사용자·자원·행위를 받아 역할별 권한표로 접근 가능 여부를 검사한다.
+# 사용자 등록 → 재직 여부 → 역할 등록 → 요청 권한 보유 순서로 확인한다.
+# 하나라도 통과하지 못하면 (False, 거부 이유), 모두 통과하면 (True, "허용")을 반환한다.
+# “원래 역할로 할 수 있어?”
+
+
 import json                                                      # JSON 파일을 읽는 모듈을 불러온다
 
 with open("config/roles.json", encoding="utf-8") as f:           # 역할 파일을 연다
